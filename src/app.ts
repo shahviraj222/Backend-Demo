@@ -21,6 +21,10 @@ app.use(middlewares.requestLogger)
 
 app.use('/api', allRoutes)
 
+app.get('/', (_req, res) => {
+  res.json({ message: 'Backend is running ✅' })
+})
+
 app.use(middlewares.unknownEndpoint)
 
 export default app

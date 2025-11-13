@@ -195,7 +195,7 @@ export class AuthController {
         })
         .eq('id', user_id)
         .select()
-        .single()
+        .maybeSingle()
 
       if (error) {
         console.error('Profile updation error:', error)
